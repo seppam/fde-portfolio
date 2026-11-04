@@ -1,0 +1,39 @@
+{
+  "id": "po_10",
+  "format": "image",
+  "scenario": "normal",
+  "file": "po_10.jpg",
+  "written": {
+    "shop": "Toko Harapan Rizki (Pak Rahmat)",
+    "date": "03/11/2026"
+  },
+  "truth": {
+    "shop_id": "C014",
+    "po_number": "PO/C014/2026/11/010",
+    "po_date": "2026-11-03",
+    "lines": [
+      {
+        "raw_name": "susu kental manis sapi mas",
+        "sku": "SM-SKM-370",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "garam halus gunung",
+        "sku": "GG-GRM-250",
+        "qty": 1,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "kecap manis cap merak",
+        "sku": "KCM-KCP-520",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      }
+    ],
+    "expected_flags": []
+  }
+}

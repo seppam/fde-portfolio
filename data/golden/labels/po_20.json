@@ -1,0 +1,83 @@
+{
+  "id": "po_20",
+  "format": "pdf",
+  "scenario": "price_mismatch",
+  "file": "po_20.pdf",
+  "written": {
+    "shop": "TB Lancar Rizki - Rengasdengklok",
+    "date": "2026-11-05"
+  },
+  "truth": {
+    "shop_id": "C015",
+    "po_number": "PO/C015/2026/11/020",
+    "po_date": "2026-11-05",
+    "lines": [
+      {
+        "raw_name": "BP WNG 5",
+        "sku": "BPW-BRS-5K",
+        "qty": 2,
+        "unit": "sak",
+        "raw_unit": "karung"
+      },
+      {
+        "raw_name": "Sampo Lembut Sachet 10ml",
+        "sku": "SL-SMP-SCH",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "Susu Kental Manis Sapi Mas Sachet 40g",
+        "sku": "SM-SKM-SCH",
+        "qty": 2,
+        "unit": "renceng",
+        "raw_unit": "renteng"
+      },
+      {
+        "raw_name": "Pembersih Lantai Wangi Pagi 800ml",
+        "sku": "WP-PEL-800",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "minyak goreng surya emas pouch",
+        "sku": "SE-MYK-PCH",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "Susu Kental Manis Sapi Mas 370g",
+        "sku": "SM-SKM-370",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      },
+      {
+        "raw_name": "Kecap Manis Cap Merak Sachet 25ml",
+        "sku": "KCM-KCP-SCH",
+        "qty": 2,
+        "unit": "renceng",
+        "raw_unit": "renteng"
+      },
+      {
+        "raw_name": "Garam Halus Gunung 250g",
+        "sku": "GG-GRM-250",
+        "qty": 2,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "Deterjen Bersih Kilau 800g",
+        "sku": "BK-DTG-800",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "karton"
+      }
+    ],
+    "expected_flags": [
+      "PRICE_MISMATCH"
+    ]
+  }
+}

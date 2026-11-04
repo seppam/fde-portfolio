@@ -1,0 +1,46 @@
+{
+  "id": "po_07",
+  "format": "pdf",
+  "scenario": "normal",
+  "file": "po_07.pdf",
+  "written": {
+    "shop": "TB Sentosa Berkah - Cikampek",
+    "date": "03/11/2026"
+  },
+  "truth": {
+    "shop_id": "C019",
+    "po_number": "PO/C019/2026/11/007",
+    "po_date": "2026-11-03",
+    "lines": [
+      {
+        "raw_name": "TB GLS 220",
+        "sku": "TB-GLS-220",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "Tepung Terigu Padi Emas 1kg",
+        "sku": "TP-TPG-1K",
+        "qty": 1,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "Mie Raja Kari Ayam 72g",
+        "sku": "MR-KAR-72",
+        "qty": 3,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "Sampo Lembut Botol 170ml",
+        "sku": "SL-SMP-170",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dos"
+      }
+    ],
+    "expected_flags": []
+  }
+}

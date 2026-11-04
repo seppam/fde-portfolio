@@ -1,0 +1,53 @@
+{
+  "id": "po_11",
+  "format": "pdf",
+  "scenario": "normal",
+  "file": "po_11.pdf",
+  "written": {
+    "shop": "Toko Sentosa Amanah - Telukjambe",
+    "date": "03/11/2026"
+  },
+  "truth": {
+    "shop_id": "C031",
+    "po_number": "C031-1111",
+    "po_date": "2026-11-03",
+    "lines": [
+      {
+        "raw_name": "tisu lembut 250 lembar",
+        "sku": "TSL-TIS-250",
+        "qty": 2,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "susu kental manis sapi mas",
+        "sku": "SM-SKM-370",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      },
+      {
+        "raw_name": "sampo lembut sachet",
+        "sku": "SL-SMP-SCH",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "Gula Pasir Manis Jaya 1kg",
+        "sku": "GMJ-GUL-1K",
+        "qty": 2,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "MR ST 75",
+        "sku": "MR-SOT-75",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      }
+    ],
+    "expected_flags": []
+  }
+}

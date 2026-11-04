@@ -1,0 +1,53 @@
+{
+  "id": "po_18",
+  "format": "image",
+  "scenario": "normal",
+  "file": "po_18.jpg",
+  "written": {
+    "shop": "Mandiri Sentosa",
+    "date": "02/11/2026"
+  },
+  "truth": {
+    "shop_id": "C024",
+    "po_number": "C024-1118",
+    "po_date": "2026-11-02",
+    "lines": [
+      {
+        "raw_name": "goreng 85g",
+        "sku": "MR-GRG-85",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "KM CAP MRK 520",
+        "sku": "KCM-KCP-520",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      },
+      {
+        "raw_name": "piring wangi pagi cair 780ml",
+        "sku": "SWP-SBN-CR",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "kopi senja hitam",
+        "sku": "KS-HIT-25",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "kecap manis cap merak sachet",
+        "sku": "KCM-KCP-SCH",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "karton"
+      }
+    ],
+    "expected_flags": []
+  }
+}

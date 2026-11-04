@@ -1,0 +1,60 @@
+{
+  "id": "po_21",
+  "format": "image",
+  "scenario": "normal",
+  "file": "po_21.jpg",
+  "written": {
+    "shop": "Toko Sentosa Amanah - Telukjambe",
+    "date": "05/11/2026"
+  },
+  "truth": {
+    "shop_id": "C031",
+    "po_number": "PO/C031/2026/11/021",
+    "po_date": "2026-11-05",
+    "lines": [
+      {
+        "raw_name": "senyum 190g",
+        "sku": "PGS-PGG-190",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "tirta bening air mineral",
+        "sku": "TB-AIR-1500",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "mie raja kari ayam",
+        "sku": "MR-KAR-72",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "SM WNG PG 75",
+        "sku": "SWP-SBN-75",
+        "qty": 3,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "PL WNG PG 800",
+        "sku": "WP-PEL-800",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "kopi senjam occa",
+        "sku": "KS-MOC-30",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "karton"
+      }
+    ],
+    "expected_flags": []
+  }
+}

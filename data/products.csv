@@ -1,0 +1,41 @@
+sku,name,category,price_pcs,pack_units,active
+MR-GRG-85,Mie Raja Goreng 85g,mi instan,3200,"{""dus"": 40}",1
+MR-SOT-75,Mie Raja Soto 75g,mi instan,3000,"{""dus"": 40}",1
+MR-AYB-70,Mie Raja Ayam Bawang 70g,mi instan,3000,"{""dus"": 40}",1
+MR-KAR-72,Mie Raja Kari Ayam 72g,mi instan,3100,"{""dus"": 40}",1
+MR-GRP-90,Mie Raja Goreng Pedas 90g,mi instan,3400,"{""dus"": 40}",1
+KS-SUS-30,Kopi Senja Susu 30g,kopi,1500,"{""renceng"": 10, ""dus"": 120}",1
+KS-HIT-25,Kopi Senja Hitam 25g,kopi,1200,"{""renceng"": 10, ""dus"": 120}",1
+KS-MOC-30,Kopi Senja Mocca 30g,kopi,1600,"{""renceng"": 10, ""dus"": 120}",1
+TL-KTK-200,Teh Lestari Kotak 200ml,minuman,3500,"{""dus"": 24}",1
+TL-BTL-350,Teh Lestari Botol 350ml,minuman,4500,"{""dus"": 12}",1
+TB-AIR-600,Tirta Bening Air Mineral 600ml,minuman,3000,"{""dus"": 24}",1
+TB-AIR-1500,Tirta Bening Air Mineral 1500ml,minuman,5500,"{""dus"": 12}",1
+SE-MYK-1L,Minyak Goreng Surya Emas 1L,sembako,18500,"{""dus"": 12}",1
+SE-MYK-2L,Minyak Goreng Surya Emas 2L,sembako,36000,"{""dus"": 6}",1
+GMJ-GUL-1K,Gula Pasir Manis Jaya 1kg,sembako,17500,"{""bal"": 20}",1
+BPW-BRS-5K,Beras Pandan Wangi 5kg,sembako,78000,"{""sak"": 4}",1
+SWP-SBN-75,Sabun Mandi Wangi Pagi 75g,perawatan,3800,"{""dus"": 72}",1
+BK-DTG-800,Deterjen Bersih Kilau 800g,rumah tangga,22000,"{""dus"": 12}",1
+BK-DTG-SCH,Deterjen Bersih Kilau Sachet 45g,rumah tangga,1000,"{""renceng"": 12, ""dus"": 144}",1
+SL-SMP-SCH,Sampo Lembut Sachet 10ml,perawatan,1000,"{""renceng"": 12, ""dus"": 144}",1
+SL-SMP-170,Sampo Lembut Botol 170ml,perawatan,21000,"{""dus"": 24}",1
+PGS-PGG-190,Pasta Gigi Senyum 190g,perawatan,14000,"{""dus"": 48}",1
+SM-SKM-370,Susu Kental Manis Sapi Mas 370g,susu,12500,"{""dus"": 48}",1
+SM-SKM-SCH,Susu Kental Manis Sapi Mas Sachet 40g,susu,1800,"{""renceng"": 6, ""dus"": 120}",1
+BR-BSK-120,Biskuit Renyah Kelapa 120g,makanan ringan,7500,"{""dus"": 24}",1
+BR-BSK-CKL,Biskuit Renyah Cokelat 120g,makanan ringan,8000,"{""dus"": 24}",1
+KCM-KCP-520,Kecap Manis Cap Merak 520ml,bumbu,21500,"{""dus"": 12}",1
+KCM-KCP-SCH,Kecap Manis Cap Merak Sachet 25ml,bumbu,700,"{""renceng"": 12, ""dus"": 144}",1
+SPN-SAU-340,Saus Sambal Pedas Nusantara 340ml,bumbu,13000,"{""dus"": 24}",1
+TSL-TIS-250,Tisu Lembut 250 lembar,rumah tangga,11000,"{""bal"": 24}",1
+WP-PEL-800,Pembersih Lantai Wangi Pagi 800ml,rumah tangga,15500,"{""dus"": 12}",1
+SWP-SBN-CR,Sabun Cuci Piring Wangi Pagi Cair 780ml,rumah tangga,14500,"{""dus"": 12}",1
+MR-CUP-SOT,Mie Raja Cup Soto 65g,mi instan,5500,"{""dus"": 24}",1
+KS-3IN1-OLD,Kopi Senja 3in1 Klasik 20g,kopi,1100,"{""renceng"": 10, ""dus"": 120}",0
+TL-GLS-180,Teh Lestari Gelas 180ml,minuman,1500,"{""dus"": 24}",0
+SE-MYK-PCH,Minyak Goreng Surya Emas Pouch 900ml,sembako,16500,"{""dus"": 12}",1
+TP-TPG-1K,Tepung Terigu Padi Emas 1kg,sembako,13000,"{""bal"": 10}",1
+GG-GRM-250,Garam Halus Gunung 250g,bumbu,3000,"{""bal"": 50}",1
+SM-UHT-200,Susu UHT Sapi Mas Cokelat 200ml,susu,6000,"{""dus"": 24}",1
+TB-GLS-220,Tirta Bening Gelas 220ml,minuman,800,"{""dus"": 48}",1

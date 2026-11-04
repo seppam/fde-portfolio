@@ -1,0 +1,46 @@
+{
+  "id": "po_19",
+  "format": "image",
+  "scenario": "normal",
+  "file": "po_19.jpg",
+  "written": {
+    "shop": "Toko Barokah Makmur",
+    "date": "2026-11-04"
+  },
+  "truth": {
+    "shop_id": "C032",
+    "po_number": "PO/C032/2026/11/019",
+    "po_date": "2026-11-04",
+    "lines": [
+      {
+        "raw_name": "SC PRN WNG PG CR 780",
+        "sku": "SWP-SBN-CR",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      },
+      {
+        "raw_name": "minyak goreng surya emas",
+        "sku": "SE-MYK-2L",
+        "qty": 3,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "manis sapi mas 370g",
+        "sku": "SM-SKM-370",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "wangi pagi 75g",
+        "sku": "SWP-SBN-75",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "karton"
+      }
+    ],
+    "expected_flags": []
+  }
+}

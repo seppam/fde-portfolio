@@ -1,0 +1,81 @@
+{
+  "id": "po_28",
+  "format": "pdf",
+  "scenario": "normal",
+  "file": "po_28.pdf",
+  "written": {
+    "shop": "Toko Abadi Bintang - Cikampek",
+    "date": "2026-11-04"
+  },
+  "truth": {
+    "shop_id": "C030",
+    "po_number": "PO/C030/2026/11/028",
+    "po_date": "2026-11-04",
+    "lines": [
+      {
+        "raw_name": "tepung terigu padi emas",
+        "sku": "TP-TPG-1K",
+        "qty": 10,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "TB AIR MNR 600",
+        "sku": "TB-AIR-600",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "mie raja goreng pedas",
+        "sku": "MR-GRP-90",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "saus sambal pedas nusantara",
+        "sku": "SPN-SAU-340",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "Susu Kental Manis Sapi Mas 370g",
+        "sku": "SM-SKM-370",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "SL SCH 10",
+        "sku": "SL-SMP-SCH",
+        "qty": 3,
+        "unit": "renceng",
+        "raw_unit": "rcg"
+      },
+      {
+        "raw_name": "kecap manis cap merak sachet",
+        "sku": "KCM-KCP-SCH",
+        "qty": 3,
+        "unit": "renceng",
+        "raw_unit": "renceng"
+      },
+      {
+        "raw_name": "minyak goreng surya emas pouch",
+        "sku": "SE-MYK-PCH",
+        "qty": 3,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "Teh Lestari Kotak 200ml",
+        "sku": "TL-KTK-200",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      }
+    ],
+    "expected_flags": []
+  }
+}

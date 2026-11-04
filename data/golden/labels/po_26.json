@@ -1,0 +1,46 @@
+{
+  "id": "po_26",
+  "format": "pdf",
+  "scenario": "normal",
+  "file": "po_26.pdf",
+  "written": {
+    "shop": "Toko Bintang Lancar",
+    "date": "05/11/2026"
+  },
+  "truth": {
+    "shop_id": "C007",
+    "po_number": "C007-1126",
+    "po_date": "2026-11-05",
+    "lines": [
+      {
+        "raw_name": "TL BTL 350",
+        "sku": "TL-BTL-350",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "KM CAP MRK 520",
+        "sku": "KCM-KCP-520",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      },
+      {
+        "raw_name": "Mie Raja Goreng Pedas 90g",
+        "sku": "MR-GRP-90",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "pembersih lantai wangi pagi",
+        "sku": "WP-PEL-800",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dus"
+      }
+    ],
+    "expected_flags": []
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "po_22",
+  "format": "image",
+  "scenario": "missing_po_number",
+  "file": "po_22.jpg",
+  "written": {
+    "shop": "Toko Harapan Rizki (Pak Rahmat)",
+    "date": "03/11/2026"
+  },
+  "truth": {
+    "shop_id": "C014",
+    "po_number": null,
+    "po_date": "2026-11-03",
+    "lines": [
+      {
+        "raw_name": "KS SS 30",
+        "sku": "KS-SUS-30",
+        "qty": 1,
+        "unit": "renceng",
+        "raw_unit": "rcg"
+      },
+      {
+        "raw_name": "TB AIR MNR 600",
+        "sku": "TB-AIR-600",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "beras pandan wangi",
+        "sku": "BPW-BRS-5K",
+        "qty": 1,
+        "unit": "sak",
+        "raw_unit": "karung"
+      },
+      {
+        "raw_name": "air mineral 1500ml",
+        "sku": "TB-AIR-1500",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "GH GNN 250",
+        "sku": "GG-GRM-250",
+        "qty": 2,
+        "unit": "bal",
+        "raw_unit": "bal"
+      }
+    ],
+    "expected_flags": [
+      "MISSING_PO_NUMBER"
+    ]
+  }
+}

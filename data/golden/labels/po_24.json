@@ -1,0 +1,88 @@
+{
+  "id": "po_24",
+  "format": "xlsx",
+  "scenario": "normal",
+  "file": "po_24.xlsx",
+  "written": {
+    "shop": "Toko Berkah Sentosa (Pak Asep)",
+    "date": "02-11-26"
+  },
+  "truth": {
+    "shop_id": "C021",
+    "po_number": "C021-1124",
+    "po_date": "2026-11-02",
+    "lines": [
+      {
+        "raw_name": "Tirta Bening Air Mineral 600ml",
+        "sku": "TB-AIR-600",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "pasta ggii senyum",
+        "sku": "PGS-PGG-190",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "KM CAP MRK 520",
+        "sku": "KCM-KCP-520",
+        "qty": 3,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "sabun cuci piring wangi pgai cair",
+        "sku": "SWP-SBN-CR",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "deterjen bersih kilau sachet",
+        "sku": "BK-DTG-SCH",
+        "qty": 2,
+        "unit": "renceng",
+        "raw_unit": "rcg"
+      },
+      {
+        "raw_name": "biskiut renyah cokelat",
+        "sku": "BR-BSK-CKL",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "mie raja ayam bawang",
+        "sku": "MR-AYB-70",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      },
+      {
+        "raw_name": "gul apasir manis jaya",
+        "sku": "GMJ-GUL-1K",
+        "qty": 3,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "Tepung Terigu Padi Emas 1kg",
+        "sku": "TP-TPG-1K",
+        "qty": 2,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "TB GLS 220",
+        "sku": "TB-GLS-220",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dos"
+      }
+    ],
+    "expected_flags": []
+  }
+}

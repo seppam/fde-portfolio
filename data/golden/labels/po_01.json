@@ -1,0 +1,39 @@
+{
+  "id": "po_01",
+  "format": "image",
+  "scenario": "normal",
+  "file": "po_01.jpg",
+  "written": {
+    "shop": "Minimarket Mandiri Abadi - Bekasi",
+    "date": "04/11/2026"
+  },
+  "truth": {
+    "shop_id": "C038",
+    "po_number": "C038-1101",
+    "po_date": "2026-11-04",
+    "lines": [
+      {
+        "raw_name": "tirta bening air mineral",
+        "sku": "TB-AIR-600",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      },
+      {
+        "raw_name": "cap merak sachet 25ml",
+        "sku": "KCM-KCP-SCH",
+        "qty": 1,
+        "unit": "renceng",
+        "raw_unit": "renceng"
+      },
+      {
+        "raw_name": "pasta gigis enyum",
+        "sku": "PGS-PGG-190",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      }
+    ],
+    "expected_flags": []
+  }
+}

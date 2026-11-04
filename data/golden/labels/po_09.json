@@ -1,0 +1,90 @@
+{
+  "id": "po_09",
+  "format": "pdf",
+  "scenario": "discontinued",
+  "file": "po_09.pdf",
+  "written": {
+    "shop": "Warung Harapan Mandiri",
+    "date": "2026-11-04"
+  },
+  "truth": {
+    "shop_id": "C036",
+    "po_number": "No. 49/36/XI",
+    "po_date": "2026-11-04",
+    "lines": [
+      {
+        "raw_name": "kopi senja hitam",
+        "sku": "KS-HIT-25",
+        "qty": 5,
+        "unit": "renceng",
+        "raw_unit": "renceng"
+      },
+      {
+        "raw_name": "TL KTK 200",
+        "sku": "TL-KTK-200",
+        "qty": 3,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      },
+      {
+        "raw_name": "SM WNG PG 75",
+        "sku": "SWP-SBN-75",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      },
+      {
+        "raw_name": "kopi senja mocca",
+        "sku": "KS-MOC-30",
+        "qty": 1,
+        "unit": "renceng",
+        "raw_unit": "renceng"
+      },
+      {
+        "raw_name": "TB GLS 220",
+        "sku": "TB-GLS-220",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "Teh Lestari Botol 350ml",
+        "sku": "TL-BTL-350",
+        "qty": 3,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "Deterjen Bersih Kilau 800g",
+        "sku": "BK-DTG-800",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "mie raja cup soto",
+        "sku": "MR-CUP-SOT",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "Sampo Lembut Sachet 10ml",
+        "sku": "SL-SMP-SCH",
+        "qty": 2,
+        "unit": "renceng",
+        "raw_unit": "renceng"
+      },
+      {
+        "raw_name": "Kopi Senja 3in1 Klasik 20g",
+        "sku": "KS-3IN1-OLD",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dus"
+      }
+    ],
+    "expected_flags": [
+      "DISCONTINUED"
+    ]
+  }
+}

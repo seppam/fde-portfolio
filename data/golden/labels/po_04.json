@@ -1,0 +1,74 @@
+{
+  "id": "po_04",
+  "format": "xlsx",
+  "scenario": "normal",
+  "file": "po_04.xlsx",
+  "written": {
+    "shop": "Mulia Sentosa",
+    "date": "03/11/2026"
+  },
+  "truth": {
+    "shop_id": "C033",
+    "po_number": "PO/C033/2026/11/004",
+    "po_date": "2026-11-03",
+    "lines": [
+      {
+        "raw_name": "KS HTM 25",
+        "sku": "KS-HIT-25",
+        "qty": 3,
+        "unit": "renceng",
+        "raw_unit": "rcg"
+      },
+      {
+        "raw_name": "SL SCH 10",
+        "sku": "SL-SMP-SCH",
+        "qty": 1,
+        "unit": "renceng",
+        "raw_unit": "rcg"
+      },
+      {
+        "raw_name": "mie raja cup soto",
+        "sku": "MR-CUP-SOT",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "minayk goreng surya emas",
+        "sku": "SE-MYK-1L",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "teh lestair botol",
+        "sku": "TL-BTL-350",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "susu ketnal manis sapi mas sachet",
+        "sku": "SM-SKM-SCH",
+        "qty": 3,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "TB AIR MNR 600",
+        "sku": "TB-AIR-600",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "detejren bersih kilau",
+        "sku": "BK-DTG-800",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dus"
+      }
+    ],
+    "expected_flags": []
+  }
+}

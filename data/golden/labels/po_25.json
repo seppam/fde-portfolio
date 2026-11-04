@@ -1,0 +1,83 @@
+{
+  "id": "po_25",
+  "format": "xlsx",
+  "scenario": "unit_not_sold",
+  "file": "po_25.xlsx",
+  "written": {
+    "shop": "Toko Mandiri Rizki",
+    "date": "05-11-26"
+  },
+  "truth": {
+    "shop_id": "C016",
+    "po_number": "No. 74/16/XI",
+    "po_date": "2026-11-05",
+    "lines": [
+      {
+        "raw_name": "TL BTL 350",
+        "sku": "TL-BTL-350",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "BR KLP 120",
+        "sku": "BR-BSK-120",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "minyak goreng surya emas",
+        "sku": "SE-MYK-1L",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "MR CUP ST 65",
+        "sku": "MR-CUP-SOT",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "TL KTK 200",
+        "sku": "TL-KTK-200",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "mie rajag oreng pedas",
+        "sku": "MR-GRP-90",
+        "qty": 3,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "deterjen bershi kilau",
+        "sku": "BK-DTG-800",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "Susu UHT Sapi Mas Cokelat 200ml",
+        "sku": "SM-UHT-200",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "Mie Raja Goreng",
+        "sku": "MR-GRG-85",
+        "qty": 1,
+        "unit": "bal",
+        "raw_unit": "bal"
+      }
+    ],
+    "expected_flags": [
+      "UNIT_NOT_SOLD"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "po_06",
+  "format": "pdf",
+  "scenario": "normal",
+  "file": "po_06.pdf",
+  "written": {
+    "shop": "WARUNG HARAPAN MANDIRI",
+    "date": "2 Nov 2026"
+  },
+  "truth": {
+    "shop_id": "C036",
+    "po_number": "C036-1106",
+    "po_date": "2026-11-02",
+    "lines": [
+      {
+        "raw_name": "TT PD EMS 1",
+        "sku": "TP-TPG-1K",
+        "qty": 2,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "MR GRN 85",
+        "sku": "MR-GRG-85",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "Kopi Senja Susu 30g",
+        "sku": "KS-SUS-30",
+        "qty": 2,
+        "unit": "renceng",
+        "raw_unit": "rcg"
+      },
+      {
+        "raw_name": "BP WNG 5",
+        "sku": "BPW-BRS-5K",
+        "qty": 10,
+        "unit": "sak",
+        "raw_unit": "karung"
+      }
+    ],
+    "expected_flags": []
+  }
+}

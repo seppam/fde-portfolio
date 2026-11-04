@@ -1,0 +1,53 @@
+{
+  "id": "po_15",
+  "format": "image",
+  "scenario": "normal",
+  "file": "po_15.jpg",
+  "written": {
+    "shop": "Sentosa Berkah",
+    "date": "2026-11-03"
+  },
+  "truth": {
+    "shop_id": "C019",
+    "po_number": "PO/C019/2026/11/015",
+    "po_date": "2026-11-03",
+    "lines": [
+      {
+        "raw_name": "senyum 190g",
+        "sku": "PGS-PGG-190",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "botol 170ml",
+        "sku": "SL-SMP-170",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "padi emas 1kg",
+        "sku": "TP-TPG-1K",
+        "qty": 3,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "susu 30g",
+        "sku": "KS-SUS-30",
+        "qty": 1,
+        "unit": "renceng",
+        "raw_unit": "rcg"
+      },
+      {
+        "raw_name": "TL KTK 200",
+        "sku": "TL-KTK-200",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "karton"
+      }
+    ],
+    "expected_flags": []
+  }
+}

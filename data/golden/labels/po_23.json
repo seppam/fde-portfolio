@@ -1,0 +1,81 @@
+{
+  "id": "po_23",
+  "format": "pdf",
+  "scenario": "normal",
+  "file": "po_23.pdf",
+  "written": {
+    "shop": "Minimarket Mandiri Berkah (Pak Asep)",
+    "date": "2026-11-03"
+  },
+  "truth": {
+    "shop_id": "C035",
+    "po_number": "No. 70/35/XI",
+    "po_date": "2026-11-03",
+    "lines": [
+      {
+        "raw_name": "Teh Lestari Botol 350ml",
+        "sku": "TL-BTL-350",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "DB KL 800",
+        "sku": "BK-DTG-800",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      },
+      {
+        "raw_name": "Tirta Bening Gelas 220ml",
+        "sku": "TB-GLS-220",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "mie raja goreng pedas",
+        "sku": "MR-GRP-90",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "Mie Raja Kari Ayam 72g",
+        "sku": "MR-KAR-72",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "tirta bening air mineral",
+        "sku": "TB-AIR-600",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "Sampo Lembut Sachet 10ml",
+        "sku": "SL-SMP-SCH",
+        "qty": 10,
+        "unit": "renceng",
+        "raw_unit": "rcg"
+      },
+      {
+        "raw_name": "Sabun Cuci Piring Wangi Pagi Cair 780ml",
+        "sku": "SWP-SBN-CR",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "SK MNS SP MAS SCH 40",
+        "sku": "SM-SKM-SCH",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dus"
+      }
+    ],
+    "expected_flags": []
+  }
+}

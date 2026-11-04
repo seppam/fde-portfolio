@@ -1,0 +1,62 @@
+{
+  "id": "po_12",
+  "format": "xlsx",
+  "scenario": "credit_limit",
+  "file": "po_12.xlsx",
+  "written": {
+    "shop": "Toko Makmur Sumber (Bu Neneng)",
+    "date": "2026-11-05"
+  },
+  "truth": {
+    "shop_id": "C012",
+    "po_number": "PO-2611084",
+    "po_date": "2026-11-05",
+    "lines": [
+      {
+        "raw_name": "MG SRY EMS 1",
+        "sku": "SE-MYK-1L",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "SM WNG PG 75",
+        "sku": "SWP-SBN-75",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "MR AYM BWN 70",
+        "sku": "MR-AYB-70",
+        "qty": 6,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "kecap manis cap merak sachet",
+        "sku": "KCM-KCP-SCH",
+        "qty": 5,
+        "unit": "renceng",
+        "raw_unit": "rcg"
+      },
+      {
+        "raw_name": "mie raja goreng",
+        "sku": "MR-GRG-85",
+        "qty": 8,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "Tirta Bening Gelas 220ml",
+        "sku": "TB-GLS-220",
+        "qty": 8,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      }
+    ],
+    "expected_flags": [
+      "CREDIT_LIMIT"
+    ]
+  }
+}

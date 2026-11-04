@@ -1,0 +1,53 @@
+{
+  "id": "po_27",
+  "format": "image",
+  "scenario": "qty_words",
+  "file": "po_27.jpg",
+  "written": {
+    "shop": "Mulia Sumber",
+    "date": "03/11/2026"
+  },
+  "truth": {
+    "shop_id": "C029",
+    "po_number": "C029-1127",
+    "po_date": "2026-11-03",
+    "lines": [
+      {
+        "raw_name": "soto 75g",
+        "sku": "MR-SOT-75",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "ayam bawang 70g",
+        "sku": "MR-AYB-70",
+        "qty": 3,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "sampo lembut botol",
+        "sku": "SL-SMP-170",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "mie raja kari ayam",
+        "sku": "MR-KAR-72",
+        "qty": 3,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "kilau sachet 45g",
+        "sku": "BK-DTG-SCH",
+        "qty": 1,
+        "unit": "renceng",
+        "raw_unit": "renteng"
+      }
+    ],
+    "expected_flags": []
+  }
+}

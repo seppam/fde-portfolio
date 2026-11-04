@@ -1,0 +1,48 @@
+{
+  "id": "po_14",
+  "format": "image",
+  "scenario": "duplicate",
+  "file": "po_14.jpg",
+  "written": {
+    "shop": "TB Lancar Rizki (Bu Neneng)",
+    "date": "05/11/2026"
+  },
+  "truth": {
+    "shop_id": "C015",
+    "po_number": "C015-1103",
+    "po_date": "2026-11-05",
+    "lines": [
+      {
+        "raw_name": "TL 250 LMB",
+        "sku": "TSL-TIS-250",
+        "qty": 3,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "surya emas pouch 900ml",
+        "sku": "SE-MYK-PCH",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "garam halus gunung",
+        "sku": "GG-GRM-250",
+        "qty": 10,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "sampo lembut botol",
+        "sku": "SL-SMP-170",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      }
+    ],
+    "expected_flags": [
+      "DUPLICATE_PO"
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "po_16",
+  "format": "xlsx",
+  "scenario": "normal",
+  "file": "po_16.xlsx",
+  "written": {
+    "shop": "TB JAYA BERKAH",
+    "date": "05/11/2026"
+  },
+  "truth": {
+    "shop_id": "C025",
+    "po_number": "PO-2611112",
+    "po_date": "2026-11-05",
+    "lines": [
+      {
+        "raw_name": "tepungt erigu padi emas",
+        "sku": "TP-TPG-1K",
+        "qty": 2,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "Gula Pasir Manis Jaya 1kg",
+        "sku": "GMJ-GUL-1K",
+        "qty": 3,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "sabunc uci piring wangi pagi cair",
+        "sku": "SWP-SBN-CR",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "SU SP MAS CKL 200",
+        "sku": "SM-UHT-200",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "deterjen besrih kilau",
+        "sku": "BK-DTG-800",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      },
+      {
+        "raw_name": "kecap mansi cap merak sachet",
+        "sku": "KCM-KCP-SCH",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "Garam Halus Gunung 250g",
+        "sku": "GG-GRM-250",
+        "qty": 1,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "Mie Raja Goreng 85g",
+        "sku": "MR-GRG-85",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dus"
+      }
+    ],
+    "expected_flags": []
+  }
+}

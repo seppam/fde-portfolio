@@ -1,0 +1,46 @@
+{
+  "id": "po_30",
+  "format": "image",
+  "scenario": "normal",
+  "file": "po_30.jpg",
+  "written": {
+    "shop": "Toko Mandiri Sentosa (Pak Dedi)",
+    "date": "02-11-26"
+  },
+  "truth": {
+    "shop_id": "C024",
+    "po_number": "PO-2611210",
+    "po_date": "2026-11-02",
+    "lines": [
+      {
+        "raw_name": "PL WNG PG 800",
+        "sku": "WP-PEL-800",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "soto 75g",
+        "sku": "MR-SOT-75",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "GH GNN 250",
+        "sku": "GG-GRM-250",
+        "qty": 1,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "SL BTL 170",
+        "sku": "SL-SMP-170",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dus"
+      }
+    ],
+    "expected_flags": []
+  }
+}

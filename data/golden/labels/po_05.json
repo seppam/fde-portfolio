@@ -1,0 +1,83 @@
+{
+  "id": "po_05",
+  "format": "xlsx",
+  "scenario": "unknown_product",
+  "file": "po_05.xlsx",
+  "written": {
+    "shop": "Minimarket Mandiri Abadi",
+    "date": "03-11-26"
+  },
+  "truth": {
+    "shop_id": "C038",
+    "po_number": "PO-2611035",
+    "po_date": "2026-11-03",
+    "lines": [
+      {
+        "raw_name": "gula pasir manis jaya",
+        "sku": "GMJ-GUL-1K",
+        "qty": 1,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "mie raja goreng",
+        "sku": "MR-GRG-85",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "mie raja goren gpedas",
+        "sku": "MR-GRP-90",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "mie raaj kari ayam",
+        "sku": "MR-KAR-72",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "karton"
+      },
+      {
+        "raw_name": "Tirta Bening Gelas 220ml",
+        "sku": "TB-GLS-220",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "GH GNN 250",
+        "sku": "GG-GRM-250",
+        "qty": 2,
+        "unit": "bal",
+        "raw_unit": "bal"
+      },
+      {
+        "raw_name": "mie raja ayam bawang",
+        "sku": "MR-AYB-70",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "kecap amnis cap merak sachet",
+        "sku": "KCM-KCP-SCH",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      },
+      {
+        "raw_name": "Gas Elpiji 3kg",
+        "sku": null,
+        "qty": 5,
+        "unit": "pcs",
+        "raw_unit": "tabung"
+      }
+    ],
+    "expected_flags": [
+      "UNKNOWN_PRODUCT"
+    ]
+  }
+}

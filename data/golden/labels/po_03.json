@@ -1,0 +1,88 @@
+{
+  "id": "po_03",
+  "format": "pdf",
+  "scenario": "normal",
+  "file": "po_03.pdf",
+  "written": {
+    "shop": "TB Lancar Rizki",
+    "date": "2026-11-02"
+  },
+  "truth": {
+    "shop_id": "C015",
+    "po_number": "C015-1103",
+    "po_date": "2026-11-02",
+    "lines": [
+      {
+        "raw_name": "sampo lembut botol",
+        "sku": "SL-SMP-170",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "biskuit renyah cokelat",
+        "sku": "BR-BSK-CKL",
+        "qty": 5,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "DB KL 800",
+        "sku": "BK-DTG-800",
+        "qty": 3,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      },
+      {
+        "raw_name": "MR GRN PDS 90",
+        "sku": "MR-GRP-90",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "Minyak Goreng Surya Emas 2L",
+        "sku": "SE-MYK-2L",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "TB GLS 220",
+        "sku": "TB-GLS-220",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "MG SRY EMS PCH 900",
+        "sku": "SE-MYK-PCH",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "mie raja cup soto",
+        "sku": "MR-CUP-SOT",
+        "qty": 3,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "Beras Pandan Wangi 5kg",
+        "sku": "BPW-BRS-5K",
+        "qty": 5,
+        "unit": "sak",
+        "raw_unit": "karung"
+      },
+      {
+        "raw_name": "minyak goreng surya emas",
+        "sku": "SE-MYK-1L",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "karton"
+      }
+    ],
+    "expected_flags": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "po_29",
+  "format": "pdf",
+  "scenario": "qty_outlier",
+  "file": "po_29.pdf",
+  "written": {
+    "shop": "Toko Lancar Sejahtera - Rengasdengklok",
+    "date": "02-11-26"
+  },
+  "truth": {
+    "shop_id": "C009",
+    "po_number": "No. 57/09/XI",
+    "po_date": "2026-11-02",
+    "lines": [
+      {
+        "raw_name": "Sampo Lembut Botol 170ml",
+        "sku": "SL-SMP-170",
+        "qty": 500,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "kecap manis cap merak",
+        "sku": "KCM-KCP-520",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "ktn"
+      },
+      {
+        "raw_name": "Tirta Bening Air Mineral 1500ml",
+        "sku": "TB-AIR-1500",
+        "qty": 2,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "MG SRY EMS 1",
+        "sku": "SE-MYK-1L",
+        "qty": 10,
+        "unit": "dus",
+        "raw_unit": "dos"
+      },
+      {
+        "raw_name": "TL KTK 200",
+        "sku": "TL-KTK-200",
+        "qty": 1,
+        "unit": "dus",
+        "raw_unit": "dus"
+      },
+      {
+        "raw_name": "Susu Kental Manis Sapi Mas Sachet 40g",
+        "sku": "SM-SKM-SCH",
+        "qty": 3,
+        "unit": "dus",
+        "raw_unit": "karton"
+      }
+    ],
+    "expected_flags": [
+      "QTY_OUTLIER"
+    ]
+  }
+}
