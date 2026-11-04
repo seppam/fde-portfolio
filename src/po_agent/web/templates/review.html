@@ -5,7 +5,8 @@
 <div class="grid">
   <section class="doc" aria-label="Original document">
     {% if sheet_text %}<pre>{{ sheet_text }}</pre>
-    {% elif row.source.lower().endswith('.pdf') %}<iframe src="/po/{{ po_id }}/file" title="Original PO"></iframe>
+    {% elif row.source.lower().endswith('.pdf') %}<img src="/po/{{ po_id }}/preview.png" alt="Original PO, page 1">
+    <p class="muted" style="font-size:13px"><a href="/po/{{ po_id }}/file" target="_blank" rel="noopener">Open the original PDF</a></p>
     {% else %}<img src="/po/{{ po_id }}/file" alt="Original PO photo">{% endif %}
   </section>
   <section id="review" aria-label="Draft order">{% include "_review_body.html" %}</section>

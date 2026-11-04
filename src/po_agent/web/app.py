@@ -131,6 +131,27 @@ def original(po_id: int):
                     headers={"Content-Disposition": f'inline; filename="{f["name"]}"'})
 
 
+@app.get("/po/{po_id}/preview.png")
+def preview(po_id: int, page: int = 0):
+    """First page of a PDF as an image: works on phones and headless browsers,
+    which often cannot show PDFs inline."""
+    import io
+
+    import pypdfium2 as pdfium
+
+    row, _ = load(po_id)
+    f = store().get_file(row["file_sha"]) if row["file_sha"] else None
+    if not f or not f["name"].lower().endswith(".pdf"):
+        raise HTTPException(404, "no PDF")
+    pdf = pdfium.PdfDocument(f["data"])
+    if not 0 <= page < len(pdf):
+        raise HTTPException(404, "no such page")
+    img = pdf[page].render(scale=1.6).to_pil()
+    buf = io.BytesIO()
+    img.save(buf, "PNG", optimize=True)
+    return Response(buf.getvalue(), media_type="image/png", headers={"Cache-Control": "max-age=3600"})
+
+
 def _guard_open(row: dict) -> None:
     if row["status"] in ("approved", "rejected"):
         raise HTTPException(409, f"this PO is already {row['status']}")

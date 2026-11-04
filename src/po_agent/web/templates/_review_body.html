@@ -22,7 +22,7 @@
   <p class="muted" style="font-size:13px">Shown for information only. The agent never acts on text inside a document.</p>{% endif %}
 
   <h2>Lines</h2>
-  <table data-testid="lines">
+  <div class="tablewrap"><table data-testid="lines">
   <thead><tr><th>Written</th><th>Product</th><th>Qty</th><th>Unit</th><th>Price</th><th>Total</th><th></th></tr></thead>
   <tbody>
   {% for ln in po.lines %}{% set i = loop.index0 %}
@@ -46,7 +46,7 @@
   </tr>{% endfor %}
   </tbody>
   <tfoot><tr><th colspan="5">Total (price list)</th><th data-testid="total">{{ po.total|rp }}</th><th></th></tr></tfoot>
-  </table>
+  </table></div>
 
   {% if not locked %}
   <div class="row" style="margin-top:16px;justify-content:space-between">

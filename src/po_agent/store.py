@@ -147,8 +147,8 @@ class Store:
         q = (select(purchase_orders.c.id).where(purchase_orders.c.shop_id == shop_id)
              .where(purchase_orders.c.po_key == po_key(po_number))
              .where(purchase_orders.c.status != "rejected"))
-        if exclude_id:
-            q = q.where(purchase_orders.c.id != exclude_id)
+        if exclude_id:  # re-checking an existing PO: only an EARLIER one can make it a duplicate
+            q = q.where(purchase_orders.c.id < exclude_id)
         with self.engine.connect() as c:
             row = c.execute(q.order_by(purchase_orders.c.id)).first()
         return row[0] if row else None

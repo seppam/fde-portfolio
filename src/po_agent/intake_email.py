@@ -24,7 +24,9 @@ def poll_mailpit(ingest: Callable[[bytes, str, str | None], int], limit: int = 2
     except (httpx.HTTPError, KeyError, ValueError) as e:
         raise RuntimeError(f"mailbox unreachable at {base}") from e
     processed, skipped, read_ids = [], [], []
-    for m in msgs:
+    # Mailpit lists newest first; process oldest first so the earlier PO is the original
+    # and a resend is the one flagged as a duplicate.
+    for m in sorted(msgs, key=lambda m: m.get("Created", "")):
         if m.get("Read"):
             continue
         detail = httpx.get(f"{base}/api/v1/message/{m['ID']}", timeout=10).json()

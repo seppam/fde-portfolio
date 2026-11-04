@@ -144,7 +144,9 @@ def build_labels(rng: random.Random) -> list[dict]:
             if "dus" not in products()[lines[0]["sku"]].pack_units:
                 lines[0]["sku"] = "MR-SOT-75"
                 lines[0]["raw_name"] = "Mie Raja Soto"
-            flags.append("QTY_OUTLIER")
+            # 500 dus is also far above any shop's credit: both rules should fire
+            # (label completed after eval run 2 showed the CREDIT_LIMIT flag was correct).
+            flags += ["QTY_OUTLIER", "CREDIT_LIMIT"]
         if sc == "credit_limit":
             flags.append("CREDIT_LIMIT")
         if sc == "duplicate":

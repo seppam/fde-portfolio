@@ -98,3 +98,12 @@ def test_duplicate_detected_despite_o_vs_zero(store, usage):
 def test_ambiguous_variant_flag(store, usage):
     po = build(make_po([("minyak goreng surya emas", 1, "dus")]), usage, "t", store, use_llm=False)
     assert "AMBIGUOUS_VARIANT" in codes(po) and "UNKNOWN_PRODUCT" not in codes(po)
+
+
+def test_original_po_is_not_a_duplicate_of_a_later_resend(store, usage):
+    first = build(make_po([("Mie Raja Goreng 85g", 1, "dus")], number="PO-77"), usage, "a", store, use_llm=False)
+    first_id = store.save(first)
+    resend = build(make_po([("Mie Raja Goreng 85g", 1, "dus")], number="PO-77"), usage, "b", store, use_llm=False)
+    store.save(resend)
+    assert "DUPLICATE_PO" in codes(resend)
+    assert "DUPLICATE_PO" not in codes(evaluate(first, store, exclude_id=first_id))
