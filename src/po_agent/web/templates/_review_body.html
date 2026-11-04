@@ -1,0 +1,61 @@
+{% if message %}<div class="msg" data-testid="message">{{ message }}</div>{% endif %}
+<div class="card">
+  <div class="row" style="justify-content:space-between">
+    <h1 style="margin:0">PO #{{ po_id }} <span class="badge s-{{ row.status if locked else po.status }}" data-testid="status">{{ (row.status if locked else po.status).replace('_',' ') }}</span></h1>
+    {% if row.erp_ref %}<strong data-testid="erp-ref">{{ row.erp_ref }}</strong>{% endif %}
+  </div>
+  <form hx-post="/po/{{ po_id }}/header" hx-target="#review" class="row" style="margin-top:10px">
+    <label>Customer
+      <select name="shop_id" {% if locked %}disabled{% endif %} hx-trigger="change" hx-post="/po/{{ po_id }}/header" hx-target="#review" hx-include="closest form" data-testid="shop-select">
+        {% if not po.shop_id %}<option value="">? {{ po.shop_name }}</option>{% endif %}
+        {% for sid, s in shops.items() %}<option value="{{ sid }}" {% if sid == po.shop_id %}selected{% endif %}>{{ s.name }} · {{ s.city }}</option>{% endfor %}
+      </select></label>
+    <span class="conf">match {{ '%.2f'|format(po.shop_confidence) }}</span>
+    <label>PO no. <input name="po_number" value="{{ po.po_number or '' }}" size="18" {% if locked %}disabled{% endif %} hx-trigger="change" hx-post="/po/{{ po_id }}/header" hx-target="#review" hx-include="closest form"></label>
+    <span class="muted">Date {{ po.po_date or '—' }}</span>
+  </form>
+
+  <h2>Checks</h2>
+  {% for f in po.flags %}<div class="flag f-{{ f.severity }}" data-testid="flag-{{ f.code }}"><b>{{ f.code }}</b>{% if f.line %} · line {{ f.line }}{% endif %}: {{ f.message }}</div>
+  {% else %}<div class="flag f-info">All checks passed. One click to approve.</div>{% endfor %}
+  {% if po.notes %}<h2>Other text on the document</h2><div class="notes">{{ po.notes }}</div>
+  <p class="muted" style="font-size:13px">Shown for information only. The agent never acts on text inside a document.</p>{% endif %}
+
+  <h2>Lines</h2>
+  <table data-testid="lines">
+  <thead><tr><th>Written</th><th>Product</th><th>Qty</th><th>Unit</th><th>Price</th><th>Total</th><th></th></tr></thead>
+  <tbody>
+  {% for ln in po.lines %}{% set i = loop.index0 %}
+  <tr data-testid="line-{{ loop.index }}">
+    <td>{{ ln.raw_name }}<br><span class="conf m-{{ ln.method }}">{{ ln.method }}{% if ln.method != 'none' %} {{ '%.2f'|format(ln.confidence) }}{% endif %}</span></td>
+    <td><form id="l{{ i }}" hx-post="/po/{{ po_id }}/line/{{ i }}" hx-target="#review" hx-trigger="change">
+      <select name="sku" {% if locked %}disabled{% endif %} data-testid="sku-{{ loop.index }}">
+        <option value="">— choose product —</option>
+        {% if ln.candidates %}<optgroup label="Suggested">{% for c in ln.candidates %}<option value="{{ c[0] }}" {% if c[0] == ln.sku %}selected{% endif %}>{{ products[c[0]].name }} ({{ c[1]|round|int }})</option>{% endfor %}</optgroup>{% endif %}
+        <optgroup label="All products">{% for sku, p in products.items() %}<option value="{{ sku }}" {% if sku == ln.sku and not (ln.candidates and sku in ln.candidates|map('first')|list) %}selected{% endif %}>{{ p.name }}{% if not p.active %} (discontinued){% endif %}</option>{% endfor %}</optgroup>
+      </select></form></td>
+    <td><input form="l{{ i }}" name="qty" type="number" step="any" min="0" value="{{ '%g'|format(ln.qty) }}" style="width:70px" {% if locked %}disabled{% endif %} hx-post="/po/{{ po_id }}/line/{{ i }}" hx-target="#review" hx-include="#l{{ i }}" hx-trigger="change"></td>
+    <td><select form="l{{ i }}" name="unit" {% if locked %}disabled{% endif %} hx-post="/po/{{ po_id }}/line/{{ i }}" hx-target="#review" hx-include="#l{{ i }}" hx-trigger="change">
+      <option value="">?</option>
+      {% for u in (products[ln.sku].sellable_units() if ln.sku else ['pcs','dus','renceng','bal','sak']) %}<option {% if u == ln.unit %}selected{% endif %}>{{ u }}</option>{% endfor %}
+      {% if ln.unit and ln.sku and ln.unit not in products[ln.sku].sellable_units() %}<option selected>{{ ln.unit }}</option>{% endif %}
+    </select><br><span class="conf">wrote "{{ ln.raw_unit or '' }}"</span></td>
+    <td>{{ ln.unit_price|rp }}{% if ln.written_price %}<br><span class="conf">wrote {{ ln.written_price|rp }}</span>{% endif %}</td>
+    <td>{{ ln.line_total|rp }}</td>
+    <td>{% if not locked %}<button type="button" class="danger" title="Remove line" hx-post="/po/{{ po_id }}/line/{{ i }}" hx-vals='{"remove":"1","qty":"1"}' hx-target="#review">✕</button>{% endif %}</td>
+  </tr>{% endfor %}
+  </tbody>
+  <tfoot><tr><th colspan="5">Total (price list)</th><th data-testid="total">{{ po.total|rp }}</th><th></th></tr></tfoot>
+  </table>
+
+  {% if not locked %}
+  <div class="row" style="margin-top:16px;justify-content:space-between">
+    <button class="primary" hx-post="/po/{{ po_id }}/approve" hx-target="#review" {% if po.status == 'blocked' %}disabled title="Fix blocked checks first"{% endif %} data-testid="approve">Approve → create draft in ERP</button>
+    <form hx-post="/po/{{ po_id }}/reject" hx-target="#review" class="row"><input name="reason" placeholder="Reason (optional)"><button class="danger" type="submit" data-testid="reject">Reject</button></form>
+  </div>
+  {% endif %}
+  <p class="muted" style="font-size:13px">Model: {{ po.usage.provider }}/{{ po.usage.model }} · {{ po.usage.input_tokens }} in / {{ po.usage.output_tokens }} out tokens{% if po.usage.cached %} · cached{% endif %}</p>
+</div>
+<details class="card" style="margin-top:12px"><summary>Audit log ({{ audit|length }})</summary>
+<table>{% for a in audit %}<tr><td class="muted">{{ a.at.strftime('%d %b %H:%M:%S') if a.at else '' }}</td><td>{{ a.actor }}</td><td>{{ a.action }}</td><td class="muted" style="font-size:12.5px">{{ a.detail }}</td></tr>{% endfor %}</table>
+</details>

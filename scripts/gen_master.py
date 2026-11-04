@@ -82,6 +82,10 @@ def make_shops(rng: random.Random) -> list[dict]:
             "credit_limit": limit,
             "outstanding": int(limit * rng.choice([0.1, 0.3, 0.5, 0.7])),
         })
+    # Normal shops have room for a normal order (fix after eval run 1 showed false CREDIT_LIMIT flags).
+    for s in shops:
+        s["credit_limit"] = max(s["credit_limit"], 30_000_000)
+        s["outstanding"] = min(s["outstanding"], int(s["credit_limit"] * 0.3))
     # One shop almost at its limit, used by the credit-limit scenario.
     shops[11]["credit_limit"] = 5_000_000
     shops[11]["outstanding"] = 4_600_000

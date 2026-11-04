@@ -44,7 +44,18 @@ markers = [
   "e2e: browser tests with Playwright",
 ]
 addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]
 
 [tool.ruff]
 line-length = 100
 target-version = "py312"
+
+[tool.ruff.lint]
+# B008: FastAPI's File()/Form() defaults are the framework idiom.
+# BLE001: the two broad catches are deliberate (one bad attachment / one failed PO must not stop a batch).
+ignore = ["B008", "BLE001"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/*" = ["E402"]
+"evals/*" = ["E402"]
+"tests/*" = ["E402"]

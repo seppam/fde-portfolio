@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Inbox{% endblock %}
+{% block body %}
+<h1>Incoming purchase orders</h1>
+<div class="stats">
+  <div class="stat"><span class="muted">Ready</span><b>{{ counts.ready }}</b></div>
+  <div class="stat"><span class="muted">Needs review</span><b>{{ counts.needs_review }}</b></div>
+  <div class="stat"><span class="muted">Blocked</span><b>{{ counts.blocked }}</b></div>
+  <div class="stat"><span class="muted">Approved</span><b>{{ counts.approved }}</b></div>
+</div>
+<div class="card" style="margin-bottom:16px">
+  <form action="/upload" method="post" enctype="multipart/form-data" class="row" data-testid="upload-form">
+    <strong>New PO</strong>
+    <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png,.webp,.xlsx" required data-testid="file-input">
+    <button class="primary" type="submit" data-testid="upload-button">Read PO</button>
+    <span class="muted">PDF, phone photo or Excel, max 4 MB. Reading takes 10–30 seconds.</span>
+  </form>
+  <form hx-post="/intake/email" hx-target="#mailresult" class="row" style="margin-top:10px">
+    <button type="submit">Check email inbox</button><span id="mailresult" class="muted"></span>
+  </form>
+</div>
+<div class="card">
+<table data-testid="po-table">
+<thead><tr><th>#</th><th>Received</th><th>Customer</th><th>PO no.</th><th>File</th><th>Status</th><th>ERP</th></tr></thead>
+<tbody>
+{% for r in rows %}
+<tr><td><a href="/po/{{ r.id }}">{{ r.id }}</a></td>
+<td class="muted">{{ r.created_at.strftime('%d %b %H:%M') if r.created_at else '' }}</td>
+<td>{{ r.payload.shop_name or '?' }}</td><td>{{ r.po_number or '—' }}</td><td class="muted">{{ r.source }}</td>
+<td><span class="badge s-{{ r.status }}">{{ r.status.replace('_',' ') }}</span></td><td>{{ r.erp_ref or '' }}</td></tr>
+{% else %}<tr><td colspan="7" class="muted">No POs yet. Upload one above.</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}

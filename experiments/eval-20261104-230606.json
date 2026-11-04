@@ -1,0 +1,2328 @@
+{
+  "run": "20261104-230606",
+  "note": "baseline v1",
+  "llm_match": true,
+  "models": [
+    "gemini/gemini-3.5-flash-lite",
+    "groq/openai/gpt-oss-120b"
+  ],
+  "tokens_in": 32388,
+  "tokens_out": 13799,
+  "avg_extract_latency_ms": 22479,
+  "cached_extractions": 3,
+  "wall_s": 275.8,
+  "cold": {
+    "pos": 30,
+    "shop_acc": 0.933,
+    "po_number_acc": 0.833,
+    "date_acc": 1.0,
+    "line_recall": 1.0,
+    "extra_lines": 0,
+    "sku_acc": 0.925,
+    "qty_unit_acc": 0.995,
+    "flag_recall": 0.889,
+    "false_flags": 22,
+    "zero_edit_rate": 0.433,
+    "by_format": {
+      "pdf": 0.455,
+      "image": 0.417,
+      "xlsx": 0.429
+    }
+  },
+  "learn": {
+    "pos": 30,
+    "shop_acc": 0.933,
+    "po_number_acc": 0.833,
+    "date_acc": 1.0,
+    "line_recall": 1.0,
+    "extra_lines": 0,
+    "sku_acc": 0.925,
+    "qty_unit_acc": 0.995,
+    "flag_recall": 0.889,
+    "false_flags": 22,
+    "zero_edit_rate": 0.433,
+    "by_format": {
+      "pdf": 0.455,
+      "image": 0.417,
+      "xlsx": 0.429
+    }
+  },
+  "rows_cold": [
+    {
+      "id": "po_01",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 3,
+      "lines_found": 3,
+      "lines_extra": 0,
+      "sku_ok": 2,
+      "qty_unit_ok": 3,
+      "expected_flags": [],
+      "raised_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "blocked",
+      "methods": [
+        "none",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "tirta bening air mineral",
+          "truth": "TB-AIR-600",
+          "got": null,
+          "qty": [
+            1,
+            "dus",
+            1.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_02",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 5,
+      "expected_flags": [],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "none",
+        "llm",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minyak ogreng surya emas",
+          "truth": "SE-MYK-1L",
+          "got": null,
+          "qty": [
+            2,
+            "dus",
+            2.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_03",
+      "format": "pdf",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 10,
+      "lines_found": 10,
+      "lines_extra": 0,
+      "sku_ok": 9,
+      "qty_unit_ok": 10,
+      "expected_flags": [],
+      "raised_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "none"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minyak goreng surya emas",
+          "truth": "SE-MYK-1L",
+          "got": null,
+          "qty": [
+            1,
+            "dus",
+            1.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_04",
+      "format": "xlsx",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 8,
+      "lines_found": 8,
+      "lines_extra": 0,
+      "sku_ok": 7,
+      "qty_unit_ok": 8,
+      "expected_flags": [],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "none",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minayk goreng surya emas",
+          "truth": "SE-MYK-1L",
+          "got": null,
+          "qty": [
+            1,
+            "dus",
+            1.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_05",
+      "format": "xlsx",
+      "scenario": "unknown_product",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 9,
+      "lines_found": 9,
+      "lines_extra": 0,
+      "sku_ok": 9,
+      "qty_unit_ok": 8,
+      "expected_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "none"
+      ],
+      "wrong_lines": [
+        {
+          "written": "Gas Elpiji 3kg",
+          "truth": null,
+          "got": null,
+          "qty": [
+            5,
+            "pcs",
+            5.0,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_06",
+      "format": "pdf",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 4,
+      "lines_found": 4,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 4,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "ready",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_07",
+      "format": "pdf",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 4,
+      "lines_found": 4,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 4,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "ready",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_08",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": false,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 5,
+      "expected_flags": [],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "none",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minyak goreng sruya emas",
+          "truth": "SE-MYK-2L",
+          "got": null,
+          "qty": [
+            5,
+            "dus",
+            5.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_09",
+      "format": "pdf",
+      "scenario": "discontinued",
+      "shop_ok": true,
+      "po_number_ok": false,
+      "date_ok": true,
+      "lines_truth": 10,
+      "lines_found": 10,
+      "lines_extra": 0,
+      "sku_ok": 10,
+      "qty_unit_ok": 10,
+      "expected_flags": [
+        "DISCONTINUED"
+      ],
+      "raised_flags": [
+        "DISCONTINUED"
+      ],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_10",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 3,
+      "lines_found": 3,
+      "lines_extra": 0,
+      "sku_ok": 2,
+      "qty_unit_ok": 3,
+      "expected_flags": [],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "none",
+        "fuzzy",
+        "llm"
+      ],
+      "wrong_lines": [
+        {
+          "written": "susu kental manis sapi mas",
+          "truth": "SM-SKM-370",
+          "got": null,
+          "qty": [
+            1,
+            "dus",
+            1.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_11",
+      "format": "pdf",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 5,
+      "expected_flags": [],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "none",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "susu kental manis sapi mas",
+          "truth": "SM-SKM-370",
+          "got": null,
+          "qty": [
+            10,
+            "dus",
+            10.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_12",
+      "format": "xlsx",
+      "scenario": "credit_limit",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 6,
+      "lines_found": 6,
+      "lines_extra": 0,
+      "sku_ok": 6,
+      "qty_unit_ok": 6,
+      "expected_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "raised_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "llm",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_13",
+      "format": "xlsx",
+      "scenario": "normal",
+      "shop_ok": false,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 7,
+      "lines_found": 7,
+      "lines_extra": 0,
+      "sku_ok": 5,
+      "qty_unit_ok": 7,
+      "expected_flags": [],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "none",
+        "llm",
+        "fuzzy",
+        "none",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minyak goreng surya emas",
+          "truth": "SE-MYK-2L",
+          "got": null,
+          "qty": [
+            10,
+            "dus",
+            10.0,
+            "dus"
+          ]
+        },
+        {
+          "written": "tirta bening air minearl",
+          "truth": "TB-AIR-600",
+          "got": null,
+          "qty": [
+            2,
+            "dus",
+            2.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_14",
+      "format": "image",
+      "scenario": "duplicate",
+      "shop_ok": true,
+      "po_number_ok": false,
+      "date_ok": true,
+      "lines_truth": 4,
+      "lines_found": 4,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 4,
+      "expected_flags": [
+        "DUPLICATE_PO"
+      ],
+      "raised_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "missed_flags": [
+        "DUPLICATE_PO"
+      ],
+      "false_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "zero_edit": false,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_15",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 5,
+      "qty_unit_ok": 5,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "ready",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_16",
+      "format": "xlsx",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 8,
+      "lines_found": 8,
+      "lines_extra": 0,
+      "sku_ok": 8,
+      "qty_unit_ok": 8,
+      "expected_flags": [],
+      "raised_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "zero_edit": true,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_17",
+      "format": "pdf",
+      "scenario": "injection",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 5,
+      "expected_flags": [
+        "INJECTION_SUSPECT"
+      ],
+      "raised_flags": [
+        "INJECTION_SUSPECT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "none"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minyak goreng surya emas",
+          "truth": "SE-MYK-2L",
+          "got": null,
+          "qty": [
+            1,
+            "dus",
+            1.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_18",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 5,
+      "qty_unit_ok": 5,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_19",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": false,
+      "date_ok": true,
+      "lines_truth": 4,
+      "lines_found": 4,
+      "lines_extra": 0,
+      "sku_ok": 3,
+      "qty_unit_ok": 4,
+      "expected_flags": [],
+      "raised_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "none",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minyak goreng surya emas",
+          "truth": "SE-MYK-2L",
+          "got": null,
+          "qty": [
+            3,
+            "dus",
+            3.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_20",
+      "format": "pdf",
+      "scenario": "price_mismatch",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 9,
+      "lines_found": 9,
+      "lines_extra": 0,
+      "sku_ok": 9,
+      "qty_unit_ok": 9,
+      "expected_flags": [
+        "PRICE_MISMATCH"
+      ],
+      "raised_flags": [
+        "CREDIT_LIMIT",
+        "PRICE_MISMATCH"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "zero_edit": true,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_21",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": false,
+      "date_ok": true,
+      "lines_truth": 6,
+      "lines_found": 6,
+      "lines_extra": 0,
+      "sku_ok": 5,
+      "qty_unit_ok": 6,
+      "expected_flags": [],
+      "raised_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "none",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "tirta bening air mineral",
+          "truth": "TB-AIR-1500",
+          "got": null,
+          "qty": [
+            1,
+            "dus",
+            1.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_22",
+      "format": "image",
+      "scenario": "missing_po_number",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 5,
+      "qty_unit_ok": 5,
+      "expected_flags": [
+        "MISSING_PO_NUMBER"
+      ],
+      "raised_flags": [
+        "MISSING_PO_NUMBER"
+      ],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_23",
+      "format": "pdf",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 9,
+      "lines_found": 9,
+      "lines_extra": 0,
+      "sku_ok": 8,
+      "qty_unit_ok": 9,
+      "expected_flags": [],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "none",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "tirta bening air mineral",
+          "truth": "TB-AIR-600",
+          "got": null,
+          "qty": [
+            10,
+            "dus",
+            10.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_24",
+      "format": "xlsx",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 10,
+      "lines_found": 10,
+      "lines_extra": 0,
+      "sku_ok": 10,
+      "qty_unit_ok": 10,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_25",
+      "format": "xlsx",
+      "scenario": "unit_not_sold",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 9,
+      "lines_found": 9,
+      "lines_extra": 0,
+      "sku_ok": 8,
+      "qty_unit_ok": 9,
+      "expected_flags": [
+        "UNIT_NOT_SOLD"
+      ],
+      "raised_flags": [
+        "UNIT_NOT_SOLD",
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "none",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minyak goreng surya emas",
+          "truth": "SE-MYK-1L",
+          "got": null,
+          "qty": [
+            10,
+            "dus",
+            10.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_26",
+      "format": "pdf",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 4,
+      "lines_found": 4,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 4,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "ready",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_27",
+      "format": "image",
+      "scenario": "qty_words",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 5,
+      "qty_unit_ok": 5,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "ready",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_28",
+      "format": "pdf",
+      "scenario": "normal",
+      "shop_ok": false,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 9,
+      "lines_found": 9,
+      "lines_extra": 0,
+      "sku_ok": 9,
+      "qty_unit_ok": 9,
+      "expected_flags": [],
+      "raised_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "zero_edit": false,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "llm",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_29",
+      "format": "pdf",
+      "scenario": "qty_outlier",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 6,
+      "lines_found": 6,
+      "lines_extra": 0,
+      "sku_ok": 6,
+      "qty_unit_ok": 6,
+      "expected_flags": [
+        "QTY_OUTLIER"
+      ],
+      "raised_flags": [
+        "CREDIT_LIMIT",
+        "QTY_OUTLIER"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "zero_edit": true,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_30",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 4,
+      "lines_found": 4,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 4,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "ready",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    }
+  ],
+  "rows_learn": [
+    {
+      "id": "po_01",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 3,
+      "lines_found": 3,
+      "lines_extra": 0,
+      "sku_ok": 2,
+      "qty_unit_ok": 3,
+      "expected_flags": [],
+      "raised_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "blocked",
+      "methods": [
+        "none",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "tirta bening air mineral",
+          "truth": "TB-AIR-600",
+          "got": null,
+          "qty": [
+            1,
+            "dus",
+            1.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_02",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 5,
+      "expected_flags": [],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "none",
+        "llm",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minyak ogreng surya emas",
+          "truth": "SE-MYK-1L",
+          "got": null,
+          "qty": [
+            2,
+            "dus",
+            2.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_03",
+      "format": "pdf",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 10,
+      "lines_found": 10,
+      "lines_extra": 0,
+      "sku_ok": 9,
+      "qty_unit_ok": 10,
+      "expected_flags": [],
+      "raised_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "none"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minyak goreng surya emas",
+          "truth": "SE-MYK-1L",
+          "got": null,
+          "qty": [
+            1,
+            "dus",
+            1.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_04",
+      "format": "xlsx",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 8,
+      "lines_found": 8,
+      "lines_extra": 0,
+      "sku_ok": 7,
+      "qty_unit_ok": 8,
+      "expected_flags": [],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "none",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minayk goreng surya emas",
+          "truth": "SE-MYK-1L",
+          "got": null,
+          "qty": [
+            1,
+            "dus",
+            1.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_05",
+      "format": "xlsx",
+      "scenario": "unknown_product",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 9,
+      "lines_found": 9,
+      "lines_extra": 0,
+      "sku_ok": 9,
+      "qty_unit_ok": 8,
+      "expected_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "none"
+      ],
+      "wrong_lines": [
+        {
+          "written": "Gas Elpiji 3kg",
+          "truth": null,
+          "got": null,
+          "qty": [
+            5,
+            "pcs",
+            5.0,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_06",
+      "format": "pdf",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 4,
+      "lines_found": 4,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 4,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "ready",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_07",
+      "format": "pdf",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 4,
+      "lines_found": 4,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 4,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "ready",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_08",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": false,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 5,
+      "expected_flags": [],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "none",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minyak goreng sruya emas",
+          "truth": "SE-MYK-2L",
+          "got": null,
+          "qty": [
+            5,
+            "dus",
+            5.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_09",
+      "format": "pdf",
+      "scenario": "discontinued",
+      "shop_ok": true,
+      "po_number_ok": false,
+      "date_ok": true,
+      "lines_truth": 10,
+      "lines_found": 10,
+      "lines_extra": 0,
+      "sku_ok": 10,
+      "qty_unit_ok": 10,
+      "expected_flags": [
+        "DISCONTINUED"
+      ],
+      "raised_flags": [
+        "DISCONTINUED"
+      ],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_10",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 3,
+      "lines_found": 3,
+      "lines_extra": 0,
+      "sku_ok": 2,
+      "qty_unit_ok": 3,
+      "expected_flags": [],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "none",
+        "fuzzy",
+        "llm"
+      ],
+      "wrong_lines": [
+        {
+          "written": "susu kental manis sapi mas",
+          "truth": "SM-SKM-370",
+          "got": null,
+          "qty": [
+            1,
+            "dus",
+            1.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_11",
+      "format": "pdf",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 5,
+      "expected_flags": [],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "none",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "susu kental manis sapi mas",
+          "truth": "SM-SKM-370",
+          "got": null,
+          "qty": [
+            10,
+            "dus",
+            10.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_12",
+      "format": "xlsx",
+      "scenario": "credit_limit",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 6,
+      "lines_found": 6,
+      "lines_extra": 0,
+      "sku_ok": 6,
+      "qty_unit_ok": 6,
+      "expected_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "raised_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "llm",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_13",
+      "format": "xlsx",
+      "scenario": "normal",
+      "shop_ok": false,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 7,
+      "lines_found": 7,
+      "lines_extra": 0,
+      "sku_ok": 5,
+      "qty_unit_ok": 7,
+      "expected_flags": [],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "none",
+        "llm",
+        "fuzzy",
+        "none",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minyak goreng surya emas",
+          "truth": "SE-MYK-2L",
+          "got": null,
+          "qty": [
+            10,
+            "dus",
+            10.0,
+            "dus"
+          ]
+        },
+        {
+          "written": "tirta bening air minearl",
+          "truth": "TB-AIR-600",
+          "got": null,
+          "qty": [
+            2,
+            "dus",
+            2.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_14",
+      "format": "image",
+      "scenario": "duplicate",
+      "shop_ok": true,
+      "po_number_ok": false,
+      "date_ok": true,
+      "lines_truth": 4,
+      "lines_found": 4,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 4,
+      "expected_flags": [
+        "DUPLICATE_PO"
+      ],
+      "raised_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "missed_flags": [
+        "DUPLICATE_PO"
+      ],
+      "false_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "zero_edit": false,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_15",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 5,
+      "qty_unit_ok": 5,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "ready",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_16",
+      "format": "xlsx",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 8,
+      "lines_found": 8,
+      "lines_extra": 0,
+      "sku_ok": 8,
+      "qty_unit_ok": 8,
+      "expected_flags": [],
+      "raised_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "zero_edit": true,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_17",
+      "format": "pdf",
+      "scenario": "injection",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 5,
+      "expected_flags": [
+        "INJECTION_SUSPECT"
+      ],
+      "raised_flags": [
+        "INJECTION_SUSPECT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "none"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minyak goreng surya emas",
+          "truth": "SE-MYK-2L",
+          "got": null,
+          "qty": [
+            1,
+            "dus",
+            1.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_18",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 5,
+      "qty_unit_ok": 5,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_19",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": false,
+      "date_ok": true,
+      "lines_truth": 4,
+      "lines_found": 4,
+      "lines_extra": 0,
+      "sku_ok": 3,
+      "qty_unit_ok": 4,
+      "expected_flags": [],
+      "raised_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "none",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minyak goreng surya emas",
+          "truth": "SE-MYK-2L",
+          "got": null,
+          "qty": [
+            3,
+            "dus",
+            3.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_20",
+      "format": "pdf",
+      "scenario": "price_mismatch",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 9,
+      "lines_found": 9,
+      "lines_extra": 0,
+      "sku_ok": 9,
+      "qty_unit_ok": 9,
+      "expected_flags": [
+        "PRICE_MISMATCH"
+      ],
+      "raised_flags": [
+        "CREDIT_LIMIT",
+        "PRICE_MISMATCH"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "zero_edit": true,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_21",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": false,
+      "date_ok": true,
+      "lines_truth": 6,
+      "lines_found": 6,
+      "lines_extra": 0,
+      "sku_ok": 5,
+      "qty_unit_ok": 6,
+      "expected_flags": [],
+      "raised_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT",
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "none",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "tirta bening air mineral",
+          "truth": "TB-AIR-1500",
+          "got": null,
+          "qty": [
+            1,
+            "dus",
+            1.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_22",
+      "format": "image",
+      "scenario": "missing_po_number",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 5,
+      "qty_unit_ok": 5,
+      "expected_flags": [
+        "MISSING_PO_NUMBER"
+      ],
+      "raised_flags": [
+        "MISSING_PO_NUMBER"
+      ],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_23",
+      "format": "pdf",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 9,
+      "lines_found": 9,
+      "lines_extra": 0,
+      "sku_ok": 8,
+      "qty_unit_ok": 9,
+      "expected_flags": [],
+      "raised_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "none",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": [
+        {
+          "written": "tirta bening air mineral",
+          "truth": "TB-AIR-600",
+          "got": null,
+          "qty": [
+            10,
+            "dus",
+            10.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_24",
+      "format": "xlsx",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 10,
+      "lines_found": 10,
+      "lines_extra": 0,
+      "sku_ok": 10,
+      "qty_unit_ok": 10,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_25",
+      "format": "xlsx",
+      "scenario": "unit_not_sold",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 9,
+      "lines_found": 9,
+      "lines_extra": 0,
+      "sku_ok": 8,
+      "qty_unit_ok": 9,
+      "expected_flags": [
+        "UNIT_NOT_SOLD"
+      ],
+      "raised_flags": [
+        "UNIT_NOT_SOLD",
+        "UNKNOWN_PRODUCT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "UNKNOWN_PRODUCT"
+      ],
+      "zero_edit": false,
+      "status": "needs_review",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "none",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm"
+      ],
+      "wrong_lines": [
+        {
+          "written": "minyak goreng surya emas",
+          "truth": "SE-MYK-1L",
+          "got": null,
+          "qty": [
+            10,
+            "dus",
+            10.0,
+            "dus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "po_26",
+      "format": "pdf",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 4,
+      "lines_found": 4,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 4,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "ready",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_27",
+      "format": "image",
+      "scenario": "qty_words",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 5,
+      "lines_found": 5,
+      "lines_extra": 0,
+      "sku_ok": 5,
+      "qty_unit_ok": 5,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "ready",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_28",
+      "format": "pdf",
+      "scenario": "normal",
+      "shop_ok": false,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 9,
+      "lines_found": 9,
+      "lines_extra": 0,
+      "sku_ok": 9,
+      "qty_unit_ok": 9,
+      "expected_flags": [],
+      "raised_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "zero_edit": false,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "llm",
+        "llm",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_29",
+      "format": "pdf",
+      "scenario": "qty_outlier",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 6,
+      "lines_found": 6,
+      "lines_extra": 0,
+      "sku_ok": 6,
+      "qty_unit_ok": 6,
+      "expected_flags": [
+        "QTY_OUTLIER"
+      ],
+      "raised_flags": [
+        "CREDIT_LIMIT",
+        "QTY_OUTLIER"
+      ],
+      "missed_flags": [],
+      "false_flags": [
+        "CREDIT_LIMIT"
+      ],
+      "zero_edit": true,
+      "status": "blocked",
+      "methods": [
+        "fuzzy",
+        "llm",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    },
+    {
+      "id": "po_30",
+      "format": "image",
+      "scenario": "normal",
+      "shop_ok": true,
+      "po_number_ok": true,
+      "date_ok": true,
+      "lines_truth": 4,
+      "lines_found": 4,
+      "lines_extra": 0,
+      "sku_ok": 4,
+      "qty_unit_ok": 4,
+      "expected_flags": [],
+      "raised_flags": [],
+      "missed_flags": [],
+      "false_flags": [],
+      "zero_edit": true,
+      "status": "ready",
+      "methods": [
+        "fuzzy",
+        "fuzzy",
+        "fuzzy",
+        "fuzzy"
+      ],
+      "wrong_lines": []
+    }
+  ]
+}

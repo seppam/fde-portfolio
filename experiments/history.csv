@@ -1,0 +1,2 @@
+run,note,llm_match,models,shop_acc,sku_acc,qty_unit_acc,flag_recall,false_flags,zero_edit_cold,zero_edit_learn,tokens_in,tokens_out
+20261104-230606,baseline v1,True,gemini/gemini-3.5-flash-lite groq/openai/gpt-oss-120b,0.933,0.925,0.995,0.889,22,0.433,0.433,32388,13799

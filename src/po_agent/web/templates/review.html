@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}PO #{{ po_id }}{% endblock %}
+{% block body %}
+<p><a href="/" class="muted">← Inbox</a></p>
+<div class="grid">
+  <section class="doc" aria-label="Original document">
+    {% if sheet_text %}<pre>{{ sheet_text }}</pre>
+    {% elif row.source.lower().endswith('.pdf') %}<iframe src="/po/{{ po_id }}/file" title="Original PO"></iframe>
+    {% else %}<img src="/po/{{ po_id }}/file" alt="Original PO photo">{% endif %}
+  </section>
+  <section id="review" aria-label="Draft order">{% include "_review_body.html" %}</section>
+</div>
+{% endblock %}
