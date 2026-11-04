@@ -2,3 +2,4 @@ run,note,llm_match,models,shop_acc,sku_acc,qty_unit_acc,flag_recall,false_flags,
 20261104-230606,baseline v1,True,gemini/gemini-3.5-flash-lite groq/openai/gpt-oss-120b,0.933,0.925,0.995,0.889,22,0.433,0.433,32388,13799
 20261104-231111,"v2: ambiguity flag, shop order+city, PO key, history, fixed labels",True,gemini/gemini-3.5-flash-lite groq/openai/gpt-oss-120b,1.0,0.925,0.995,1.0,1,0.533,0.533,32122,13689
 20261104-231436,v3: po_29 label completed,True,gemini/gemini-3.5-flash-lite groq/openai/gpt-oss-120b,1.0,0.925,0.995,1.0,0,0.533,0.533,32122,13689
+20261104-231931,ablation: fuzzy only,False,gemini/gemini-3.5-flash-lite groq/openai/gpt-oss-120b,1.0,0.828,0.995,0.9,4,0.3,0.3,32386,13468
