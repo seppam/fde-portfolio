@@ -25,7 +25,8 @@ Models: `gemini-3.5-flash-lite` (PDF and photos), `openai/gpt-oss-120b` on Groq
 | POs needing zero edits | 43.3% | **53.3%** | 30.0% |
 
 Tokens per PO (average): ~1,070 in / ~460 out. Average extraction time without
-cache: 20.5 s (free tier, during a period of 503 "high demand" answers).
+cache: 20.5 s (measured in run 2, the last run with uncached calls; free tier, during a
+period of 503 "high demand" answers).
 
 ## What changed between runs, and why
 
@@ -36,9 +37,9 @@ and the reasons are recorded so nobody "tunes to the test":
 |---|---|---|
 | "Toko Bintang Abadi" vs "Toko Abadi Bintang": two real customers, matcher ignored word order | agent | word order counts; city / contact break ties |
 | Handwritten "C015" read as "CO15", so a resent PO was not caught as duplicate | agent | normalised PO key (case, spaces, "No." label, O vs 0) |
-| "minyak goreng surya emas" with no size reported as *unknown product* | agent | new `AMBIGUOUS_VARIANT` check listing the sizes; shop history picks the size it always buys |
+| "minyak goreng surya emas" with no size reported as *unknown product* (13 of the 22 false flags) | agent | new `AMBIGUOUS_VARIANT` check listing the sizes; shop history picks the size it always buys |
 | PO number labels included the word "No." | test data | generator fixed |
-| 20 false credit-limit flags: synthetic shops had unrealistically small credit | test data | master data fixed (normal shops have headroom) |
+| 9 false credit-limit flags: synthetic shops had unrealistically small credit | test data | master data fixed (normal shops have headroom) |
 | PO with 500 cartons was also over credit, the label only expected the outlier | test data | label completed |
 
 ## What is still not good enough
