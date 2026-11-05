@@ -1,4 +1,6 @@
 # Local services for PO Agent. Ports chosen to avoid Simpang (5433) and Supabase stacks.
+# Fixed project name so the database volume stays "fde-portfolio_pgdata" whatever the folder is called.
+name: fde-portfolio
 services:
   db:
     image: postgres:16
