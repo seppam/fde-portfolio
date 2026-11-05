@@ -1,6 +1,6 @@
 # PO Agent — FDE portfolio plan
 
-> Status: draft, waiting for the owner's OK (2026-11-04).
+> Status: approved 2026-11-04 and completed. Phase 7 (deploy) is prepared but not deployed.
 > Client and data are fictional. No real company, customer, or price list is used.
 
 ## 1. The (fictional) engagement

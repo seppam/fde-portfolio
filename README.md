@@ -1,5 +1,7 @@
 # PO Agent
 
+[![tests](https://github.com/seppam/fde-portfolio/actions/workflows/tests.yml/badge.svg)](https://github.com/seppam/fde-portfolio/actions/workflows/tests.yml)
+
 **Shop purchase orders in, draft ERP sales orders out, with a human approving every order.**
 
 A forward-deployed-engineering portfolio project. A (fictional) FMCG distributor gets
@@ -9,7 +11,9 @@ shop wrote to the client's own product list, runs the business checks, and puts 
 draft in front of the admin. Approving creates a **draft quotation** in Odoo, never a
 confirmed order.
 
-> All company names, shops, products and prices are invented. No real customer data.
+> **Status:** portfolio project, finished November 2026. All company names, shops, products and
+> prices are invented; there is no real client and no real customer data. Runs locally; the live
+> deployment is prepared ([DEPLOY.md](docs/DEPLOY.md)) but not online.
 
 ![Review screen: an ambiguous size was picked by the admin and the order is ready](docs/img/04-review-fixed.jpg)
 
@@ -67,7 +71,20 @@ Email intake: `uv run python scripts/send_test_email.py po_03 po_17`, then
 ## Tests
 
 55 offline unit/API tests, 4 Playwright E2E tests, 1 Odoo integration test
-(`RUN_ODOO_TESTS=1`), plus the golden-set evaluation.
+(`RUN_ODOO_TESTS=1`), plus the golden-set evaluation. CI runs lint, the offline tests and the
+E2E tests on every push; the LLM eval and the Odoo test run locally because they need API keys
+and a running Odoo.
+
+## Project layout
+
+```
+src/po_agent/      pipeline: extract, match, rules, guard, store, erp/, web/
+tests/             unit + API tests, e2e/ (Playwright), test_odoo.py
+evals/run_eval.py  golden-set scoring; results in experiments/
+data/              fictional master data and the 30-PO golden set (files + labels)
+scripts/           data generators, test email sender, demo recorder
+docs/              plan, discovery, SOW, architecture, eval report, runbook, handover, deploy
+```
 
 ## Stack
 
